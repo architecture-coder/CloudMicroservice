@@ -57,7 +57,7 @@ namespace Discount.Grpc.Services
         {
            
            var deleted =  await _repository.DeleteDiscount(request.ProductName);
-            _logger.LogInformation("Discount is successfully updated. ProductName : {productName}", coupon.ProductName);
+            _logger.LogInformation("Discount is successfully updated. ProductName : {productName}", request.ProductName);
 
             var response = new DeleteDiscountResponse
             {
